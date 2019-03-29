@@ -1,3 +1,4 @@
+"use strict";
 var Complex = /** @class */ (function () {
     function Complex(rzecz, urojona) {
         this.rzecz = rzecz;

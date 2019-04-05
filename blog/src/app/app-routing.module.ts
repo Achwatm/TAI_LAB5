@@ -7,7 +7,7 @@ import {KontaktComponent} from './kontakt/kontakt.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {

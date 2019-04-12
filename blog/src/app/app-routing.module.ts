@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
-import {BlogComponent} from './blog/blog.component';
+import {BlogHomeComponent} from './components/blog-home/blog-home.component';
 import {QuizComponent} from './quiz/quiz.component';
 import {KontaktComponent} from './kontakt/kontakt.component';
-
+import {BlogItemDetailsComponent} from './components/blog-item-details/blog-item-details.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -16,13 +16,19 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-component: BlogComponent,
+component: BlogHomeComponent,
 },
 {
   path: 'quiz',
     component: QuizComponent,
 
-}];
+},
+  {
+    path: 'blog/detail/:id',
+    component: BlogItemDetailsComponent,
+  },
+
+];
 
 
 @NgModule({

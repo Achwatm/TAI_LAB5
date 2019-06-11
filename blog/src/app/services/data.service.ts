@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class DataService {
 
-  private url = 'https://localhost:8080';
+  private url = 'http://localhost:8080';
 
     constructor(private http: HttpClient) {
 }
@@ -18,5 +18,9 @@ getAll() {
   getByText(data){
       return this.http.post(this.url + '/api/posts/',data);
   }
+  createOrUpdate(post) {
+    return this.http.post(`${this.url}/api/posts`, post);
+  }
+
 
 }

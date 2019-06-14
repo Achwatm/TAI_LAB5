@@ -10,11 +10,11 @@ const postSchema = new mongoose.Schema({
     url: {type: String},
     content: {type: String},
 }, {
-    collection: 'post'
+    collection: 'ma-post'
 });
 postSchema.plugin(uniqueValidator);
 
-const PostModel = mongoose.model('post', postSchema);
+const PostModel = mongoose.model('ma-post', postSchema);
 
 async function query() {
     const result = await PostModel.find({});
